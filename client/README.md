@@ -1,0 +1,1 @@
+# Smart.Yo client sample

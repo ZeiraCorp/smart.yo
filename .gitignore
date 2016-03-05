@@ -1,5 +1,7 @@
 # node
 node_modules/
+client/node_modules/
+device/node_modules/
 
 # Idea
 .idea/
