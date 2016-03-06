@@ -1,0 +1,22 @@
+{
+  "name": "sentry",
+  "version": "1.0.0",
+  "description": "sentry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "smart.yo"
+  },
+  "author": "@k33g_org",
+  "license": "MIT",
+  "dependencies": {
+    "cylon": "^1.2.0",
+    "cylon-ble": "^0.10.1",
+    "cylon-mqtt": "^0.8.0",
+    "cylon-wiced-sense": "^0.7.0",
+    "mqtt": "^1.7.3"
+  }
+}

@@ -24,3 +24,5 @@ Add the following lines to the `[SeatDefaults]` section:
 ## Remark
 
 - device name: `bobnext.local`
+- application directory: `smart.yo.device`
+- run: ./bob.sh

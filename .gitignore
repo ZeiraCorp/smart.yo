@@ -2,6 +2,10 @@
 node_modules/
 client/node_modules/
 device/node_modules/
+sentry/node_modules/
+sentry/_sandbox/
+
+client/keys.js
 
 # Idea
 .idea/
