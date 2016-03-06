@@ -6,7 +6,8 @@ import mqtt from 'mqtt';
 import socketIo from 'socket.io';
 import config from './config';
 //import shell from 'shelljs';
-
+import Twit from 'twit';
+import keys from './keys';
 
 let httpPort = config.httpPort
   , socketPort = config.socketPort
@@ -14,7 +15,7 @@ let httpPort = config.httpPort
   , mqttCli = mqtt.connect(`mqtt://${config.mqttBroker}:${config.mqttPort}?clientId=external`)
   , io = socketIo.listen(socketPort);
 
-
+let T = new Twit(keys);
 
 
 // serving the webapp
@@ -41,6 +42,12 @@ io.sockets.on('connection', (socket) => {
         txt:infos.txt
       }) // danger/bell/on sonne/coucou c'est papa
     );
+    
+    if(infos.icon == "comment") {
+      T.post('statuses/update', { status: '@smartyodevice ' + infos.msg }, function(err, data, response) {
+        //console.log(data)
+      })
+    }
     
   });
 

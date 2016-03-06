@@ -44,7 +44,7 @@ io.sockets.on('connection', (socket) => {
 
 // connect to mqtt broker and subscribe
 mqttCli.on('connect', () => {
-  //mqttCli.subscribe('messages/+');
+  mqttCli.subscribe('messages/from/sentry+');
   mqttCli.subscribe('messages/to/webapp');
   console.log(
       "webapp started"
